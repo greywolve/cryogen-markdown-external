@@ -1,6 +1,6 @@
 # cryogen-markdown-external
 
-A Clojure library to provide Markdown rendering to the cryogen-core compiler by using an external command/program, such as [pandoc](http://pandoc.org/).
+A Clojure library to provide Markdown rendering to the [cryogen](http://cryogenweb.org/)-core compiler by using an external command/program, such as [pandoc](http://pandoc.org/).
 
 ## Usage
 
