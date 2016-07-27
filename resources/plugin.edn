@@ -1,0 +1,2 @@
+{:description "Markdown parser using an external command/program"
+ :init cryogen-markdown-external.core/init}
