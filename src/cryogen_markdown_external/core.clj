@@ -21,11 +21,12 @@
     (ext [this] ".md")
     (render-fn [this]
       (fn [rdr config]
-        (shell-command
-         (:markdown-shell-command config)
-         (->> (java.io.BufferedReader. rdr)
-              (line-seq)
-              (s/join "\n")))))))
+        (->> (shell-command
+              (:markdown-shell-command config)
+              (->> (java.io.BufferedReader. rdr)
+                   (line-seq)
+                   (s/join "\n")))
+             (rewrite-hrefs (:blog-prefix config)))))))
 
 (defn init []
   (swap! markup-registry conj (markdown-external)))
